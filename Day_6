@@ -1,0 +1,32 @@
+#3rd problem
+class Solution:
+    def defangIPaddr(self, address: str) -> str:
+        return address.replace(".","[.]")
+#gcd
+class Solution:
+    def findGCD(self, nums: List[int]) -> int:
+        large = nums[0]
+        small = nums[0]
+        for i in range(len(nums)):
+            if nums[i]>large:
+                large = nums[i]
+            if nums[i]<small:
+                small = nums[i]
+        l = large
+        s = small
+        for i in range(1,l+1):
+            if l%i == 0 and s%i == 0:
+                divi = i
+        return divi
+#number of common divisor
+class Solution:
+    def commonFactors(self, a: int, b: int) -> int:
+        count = 0
+        if a<b:
+            l = a
+        else:
+            l = b
+        for i in range(1,l+1):
+            if a%i == 0 and b%i == 0:
+                count+=1
+        return count
