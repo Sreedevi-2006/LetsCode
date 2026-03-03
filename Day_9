@@ -1,0 +1,15 @@
+#furthest point
+class Solution:
+    def furthestDistanceFromOrigin(self, moves: str) -> int:
+        right = 0
+        left = 0
+        blk = 0
+        for i in moves:
+            if i == "L":
+                left -= 1
+            elif i == "R":
+                right += 1
+            else:
+                blk += 1
+        res = abs(right+left)+blk
+        return res
