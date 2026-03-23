@@ -1,0 +1,18 @@
+list abs ( sum - element sum)
+class Solution:
+    def differenceOfSum(self, nums: List[int]) -> int:
+        x = 0
+        y = 0
+        for i in range(len(nums)):
+            x = x + nums[i]
+            if nums[i]<10:
+                
+                y = y + nums[i]
+            else:
+                o = nums[i]
+                while o!=0:
+                    e = o%10
+                    y = y + e
+                    o = o//10
+        res = abs(x-y)
+        return res
