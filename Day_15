@@ -1,0 +1,16 @@
+#perfect number sum of divisors = number
+class Solution:
+    def checkPerfectNumber(self, num: int) -> bool:
+        sum1 = 1
+        if num <= 1:
+            return False
+        i = 2
+        while i*i <= num:
+            if num % i == 0:
+                sum1 += i
+                if i != num // i:  # avoid adding sqrt twice
+                    sum1 += num // i
+            i += 1
+        
+        return sum1 == num
+        
