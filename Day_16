@@ -1,0 +1,9 @@
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        ko = num**0.5
+        temp = int(ko)
+        if temp == ko:
+            return True 
+        else:
+            return False
+    
